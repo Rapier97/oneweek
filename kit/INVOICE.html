@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Invoice &lt;number&gt;: Oneweek</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f4ef;
+    --ink: #141414;
+    --muted: #5c5a55;
+    --line: #dedad1;
+    --accent: #1f6f4a;
+    --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121311;
+      --ink: #f2f0ea;
+      --muted: #a3a097;
+      --line: #2b2c28;
+      --accent: #5fcf95;
+      --card: #1a1b18;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.5 "Inter Tight", system-ui, sans-serif;
+    padding: 32px 16px;
+  }
+  .sheet {
+    max-width: 760px; margin: 0 auto; background: var(--card);
+    border: 1px solid var(--line); border-radius: 16px; padding: 40px;
+  }
+  .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; margin-bottom: 40px; }
+  .logo { font-weight: 800; font-size: 22px; letter-spacing: -0.02em; }
+  .logo span { color: var(--accent); }
+  h1 { font-size: 36px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; text-align: right; }
+  .meta { color: var(--muted); text-align: right; margin-top: 8px; }
+  .meta b { color: var(--ink); font-weight: 600; }
+  h2 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); font-weight: 600; margin-bottom: 8px; }
+  .parties { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 40px; }
+  .parties p { color: var(--ink); }
+  .parties .muted { color: var(--muted); }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 8px; }
+  th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); font-weight: 600; padding: 0 0 10px; border-bottom: 1px solid var(--line); }
+  td { padding: 14px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th.num, td.num { text-align: right; white-space: nowrap; }
+  td small { display: block; color: var(--muted); font-size: 14px; margin-top: 2px; }
+  .total { display: flex; justify-content: flex-end; align-items: baseline; gap: 20px; padding: 18px 0 0; }
+  .total span { color: var(--muted); }
+  .total b { font-size: 32px; font-weight: 800; letter-spacing: -0.03em; }
+  .pay { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--line); }
+  .pay dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; }
+  .pay dt { color: var(--muted); }
+  .pay dd { font-weight: 600; }
+  .terms { color: var(--ink); }
+  .terms b { color: var(--accent); }
+  footer { color: var(--muted); font-size: 14px; margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .note { max-width: 760px; margin: 16px auto 0; color: var(--muted); font-size: 14px; text-align: center; }
+  @media (max-width: 600px) {
+    .sheet { padding: 24px 20px; }
+    .top { flex-direction: column; }
+    h1, .meta { text-align: left; }
+    .parties, .pay { grid-template-columns: 1fr; }
+  }
+  @media print {
+    @page { size: A4; margin: 14mm; }
+    :root { --bg: #ffffff; --ink: #141414; --muted: #5c5a55; --line: #dedad1; --accent: #1f6f4a; --card: #ffffff; }
+    body { background: #fff; padding: 0; font-size: 14px; }
+    .sheet { max-width: none; border: 0; border-radius: 0; padding: 0; }
+    .top { margin-bottom: 28px; }
+    .parties, .pay { margin-bottom: 28px; }
+    .note { display: none; }
+    a { text-decoration: none; color: inherit; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="logo">One<span>week</span></div>
+      <p class="muted" style="color: var(--muted); margin-top: 6px;">Apps, websites and AI for small businesses</p>
+    </div>
+    <div>
+      <h1>Invoice</h1>
+      <p class="meta">Number <b>&lt;invoice number&gt;</b><br>Date <b>&lt;date&gt;</b></p>
+    </div>
+  </div>
+
+  <div class="parties">
+    <div>
+      <h2>Billed to</h2>
+      <p><b>&lt;client name&gt;</b></p>
+      <p class="muted">&lt;client address line 1&gt;<br>&lt;client address line 2&gt;<br>&lt;postcode&gt;</p>
+    </div>
+    <div>
+      <h2>From</h2>
+      <p><b>Alex, trading as Oneweek</b></p>
+      <p class="muted">alex.rapier13@gmail.com<br>rapier97.github.io/oneweek</p>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Description</th><th class="num">Amount</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Build week: &lt;thing&gt;<small>50% deposit</small></td>
+        <td class="num">£1,000.00</td>
+      </tr>
+      <tr>
+        <td>Build week: &lt;thing&gt;<small>Balance, due on handover</small></td>
+        <td class="num">£1,000.00</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="total"><span>Total due</span><b>£&lt;total&gt;</b></div>
+
+  <div class="pay">
+    <div>
+      <h2>Bank details</h2>
+      <dl>
+        <dt>Account name</dt><dd>&lt;account name&gt;</dd>
+        <dt>Sort code</dt><dd>&lt;sort code&gt;</dd>
+        <dt>Account number</dt><dd>&lt;account number&gt;</dd>
+        <dt>Reference</dt><dd>&lt;invoice number&gt;</dd>
+      </dl>
+    </div>
+    <div>
+      <h2>Payment terms</h2>
+      <p class="terms"><b>Due on receipt.</b> Bank transfer, please, using the invoice number as the reference.</p>
+      <p class="terms" style="margin-top: 10px; color: var(--muted);">Not VAT registered. No VAT is charged.</p>
+    </div>
+  </div>
+
+  <footer>
+    <span>Alex, trading as Oneweek</span>
+    <span>Thank you</span>
+  </footer>
+</div>
+<p class="note">Fill in the angle-bracket placeholders, delete the line you don't need (deposit or balance), then print to PDF.</p>
+</body>
+</html>

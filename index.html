@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Oneweek: apps, websites and AI, built in a week</title>
 <meta name="description" content="I build apps and tech for small businesses. £2,000 a week, or £50 an hour.">
+<meta property="og:title" content="Oneweek: apps, websites and AI, built in a week">
+<meta property="og:description" content="I build apps and tech for small businesses. £2,000 a week, or £50 an hour.">
+<meta property="og:url" content="https://rapier97.github.io/oneweek/">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;800&display=swap" rel="stylesheet">
@@ -62,7 +66,14 @@
   .tags { display: flex; flex-wrap: wrap; gap: 10px; }
   .tags li { list-style: none; border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; }
   .tags { padding: 0; }
-  blockquote { font-size: 24px; line-height: 1.35; letter-spacing: -0.01em; max-width: 30ch; }
+  .case h3 { font-size: 24px; letter-spacing: -0.02em; font-weight: 800; margin-bottom: 6px; }
+  .case .client { color: var(--muted); margin-bottom: 20px; }
+  .case dl { display: grid; grid-template-columns: 72px 1fr; gap: 10px 16px; }
+  .case dt { font-weight: 600; color: var(--accent); }
+  .case dd { color: var(--muted); }
+  .faq { display: grid; gap: 24px; }
+  .faq h3 { font-size: 20px; letter-spacing: -0.015em; font-weight: 600; margin-bottom: 6px; }
+  .faq p { color: var(--muted); max-width: 60ch; }
   .cta { text-align: center; padding: 80px 0; }
   .cta h3 { font-size: clamp(30px, 5vw, 44px); letter-spacing: -0.03em; margin-bottom: 24px; }
   .free { color: var(--muted); font-size: 16px; margin-top: 20px; }
@@ -126,7 +137,40 @@
 
   <section>
     <h2>Recent work</h2>
-    <blockquote>An activity provider in Portsmouth ran their staff on a spreadsheet. A week later they had an app.</blockquote>
+    <div class="card case">
+      <h3>Latest build</h3>
+      <p class="client">An outdoor activity company on the south coast.</p>
+      <dl>
+        <dt>Before</dt>
+        <dd>Staff rota and mileage logs run on a spreadsheet and WhatsApp.</dd>
+        <dt>After</dt>
+        <dd>An iPhone and Android app where staff set availability, see the rota and log miles and expenses, and the owner builds the week in minutes.</dd>
+        <dt>Time</dt>
+        <dd>One week.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section>
+    <h2>Questions</h2>
+    <div class="faq">
+      <div>
+        <h3>What if it takes more than a week?</h3>
+        <p>We agree the one thing on day 1, and that is what gets built. Anything else is a second week, and you are never charged for overrun.</p>
+      </div>
+      <div>
+        <h3>Do I own it?</h3>
+        <p>Yes. Once the balance is paid, the code and all the accounts are yours.</p>
+      </div>
+      <div>
+        <h3>What do you need from me?</h3>
+        <p>An hour on day 1, quick answers during the week, and an hour on Friday to go through it.</p>
+      </div>
+      <div>
+        <h3>What happens after?</h3>
+        <p>Optional £200 a month: I host it, fix it and make small changes. Cancel any time.</p>
+      </div>
+    </div>
   </section>
 
   <div class="cta">
@@ -139,7 +183,7 @@
 </div>
 <script>
   // The only two lines you need to edit
-  const EMAIL = "you@example.com";
+  const EMAIL = "alex.rapier13@gmail.com";
   const NEXT_FREE = "Monday 9 November";
   document.querySelectorAll(".next-free").forEach(b => b.textContent = NEXT_FREE);
   document.querySelectorAll(".contact").forEach(a => {
