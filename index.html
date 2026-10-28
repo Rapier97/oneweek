@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oneweek — Apps built in a week</title>
+<meta name="description" content="I build apps and tech for small businesses. £2,000 a week, or £50 an hour.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f4ef;
+    --ink: #141414;
+    --muted: #5c5a55;
+    --line: #dedad1;
+    --accent: #1f6f4a;
+    --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121311;
+      --ink: #f2f0ea;
+      --muted: #a3a097;
+      --line: #2b2c28;
+      --accent: #5fcf95;
+      --card: #1a1b18;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font: 18px/1.55 "Inter Tight", system-ui, sans-serif;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; }
+  .logo { font-weight: 800; letter-spacing: -0.02em; }
+  .logo span { color: var(--accent); }
+  a { color: inherit; }
+  .btn {
+    display: inline-block; background: var(--ink); color: var(--bg);
+    padding: 14px 22px; border-radius: 999px; font-weight: 600; text-decoration: none;
+  }
+  .btn.small { padding: 8px 16px; font-size: 15px; }
+  .hero { padding: 72px 0 64px; }
+  h1 { font-size: clamp(40px, 8vw, 72px); line-height: 1.02; letter-spacing: -0.035em; font-weight: 800; }
+  h1 em { font-style: normal; color: var(--accent); }
+  .lead { font-size: 21px; color: var(--muted); max-width: 34ch; margin: 24px 0 32px; }
+  section { padding: 56px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); font-weight: 600; margin-bottom: 24px; }
+  .price { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 28px; }
+  .big { font-size: 48px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+  .big small { font-size: 18px; font-weight: 400; color: var(--muted); letter-spacing: 0; }
+  .card p { color: var(--muted); margin-top: 12px; }
+  ol { list-style: none; padding: 0; display: grid; gap: 20px; counter-reset: s; }
+  ol li { counter-increment: s; display: grid; grid-template-columns: 44px 1fr; }
+  ol li::before { content: counter(s); font-weight: 800; color: var(--accent); font-size: 22px; }
+  ol b { display: block; }
+  ol span { color: var(--muted); }
+  .tags { display: flex; flex-wrap: wrap; gap: 10px; }
+  .tags li { list-style: none; border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; }
+  .tags { padding: 0; }
+  blockquote { font-size: 24px; line-height: 1.35; letter-spacing: -0.01em; max-width: 30ch; }
+  .cta { text-align: center; padding: 80px 0; }
+  .cta h3 { font-size: clamp(30px, 5vw, 44px); letter-spacing: -0.03em; margin-bottom: 24px; }
+  .free { color: var(--muted); font-size: 16px; margin-top: 20px; }
+  .free::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); margin-right: 8px; vertical-align: middle; }
+  .free b { color: var(--ink); }
+  footer { color: var(--muted); font-size: 14px; padding: 24px 0 40px; }
+  @media (max-width: 600px) { .price { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">One<span>week</span></div>
+    <a class="btn small contact" href="#">Get in touch</a>
+  </header>
+
+  <div class="hero">
+    <h1>Apps, websites and AI for small businesses. <em>Built in a week.</em></h1>
+    <p class="lead">Tell me what's slowing you down. A week later it's fixed.</p>
+    <a class="btn contact" href="#">Tell me what you need →</a>
+    <p class="free">One client a week. Next free week: <b class="next-free"></b></p>
+  </div>
+
+  <section>
+    <h2>Price</h2>
+    <div class="price">
+      <div class="card">
+        <div class="big">£2,000 <small>/ build</small></div>
+        <p>One week. One thing built and handed over working. Bigger job? Book two.</p>
+      </div>
+      <div class="card">
+        <div class="big">£200 <small>/ month</small></div>
+        <p>Optional, after the build. I host it, fix it and make small changes. Cancel any time.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How it works</h2>
+    <ol>
+      <li><div><b>We talk</b><span>A quick call about what you need. Free.</span></div></li>
+      <li><div><b>I build it</b><span>You see progress as it happens. No jargon.</span></div></li>
+      <li><div><b>You use it</b><span>Handed over on Friday. Want more? Book another week.</span></div></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>What I build</h2>
+    <ul class="tags">
+      <li>iPhone &amp; Android apps</li>
+      <li>Websites</li>
+      <li>Booking systems</li>
+      <li>Staff rotas</li>
+      <li>Spreadsheet replacements</li>
+      <li>AI that answers your emails</li>
+      <li>AI that writes your quotes</li>
+      <li>Automations</li>
+      <li>Anything else, ask</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Recent work</h2>
+    <blockquote>An activity provider in Portsmouth ran their staff on a spreadsheet. A week later they had an app.</blockquote>
+  </section>
+
+  <div class="cta">
+    <h3>What do you need built?</h3>
+    <a class="btn contact" href="#">Get in touch →</a>
+    <p class="free">Next free week: <b class="next-free"></b></p>
+  </div>
+
+  <footer>© Oneweek</footer>
+</div>
+<script>
+  // The only two lines you need to edit
+  const EMAIL = "you@example.com";
+  const NEXT_FREE = "Monday 9 November";
+  document.querySelectorAll(".next-free").forEach(b => b.textContent = NEXT_FREE);
+  document.querySelectorAll(".contact").forEach(a => {
+    a.href = "mailto:" + EMAIL + "?subject=I need something built";
+  });
+</script>
+</body>
+</html>
