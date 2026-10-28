@@ -28,5 +28,5 @@ After handover there is an optional plan at £200 a month that covers hosting, f
 If that all looks right, reply with a yes and I'll send the invoice for the first £1,000 and book the week.
 
 Alex
-Oneweek
+Done in a Week
 <phone>

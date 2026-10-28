@@ -17,8 +17,8 @@ Order to do them: 1, 2, 3, 8, 4, then the rest when there is a quiet hour.
 
 ## 2. Separate bank account
 
-- **What:** A business current account that only Oneweek money goes through.
-- **Why:** Not legally required for a sole trader, but it makes bookkeeping and the tax return a 10 minute job instead of a weekend. Clients also expect to pay "Oneweek" not a personal name.
+- **What:** A business current account that only Done in a Week money goes through.
+- **Why:** Not legally required for a sole trader, but it makes bookkeeping and the tax return a 10 minute job instead of a weekend. Clients also expect to pay "Done in a Week" not a personal name.
 - **Options, all free with no monthly fee:**
   - **Starling Business:** free, good app, free Post Office cash deposits up to £1,000 a month. Simplest pick.
   - **Mettle (NatWest):** free, includes FreeAgent bookkeeping free, which covers item 3. No cash deposits. Best value if you want bookkeeping thrown in.
@@ -101,7 +101,7 @@ Order to do them: 1, 2, 3, 8, 4, then the rest when there is a quiet hour.
 
 - **Limited company.** Not worth it under about £50k profit; the admin and accountant cost eat the tax saving. Revisit when the care plan list passes 15 or if a client insists on contracting with a company.
 - **Accountant.** Optional in year one. A one-off hour (£100 to £200) before the first tax return is good value. Worth having on retainer once VAT or a company is in play.
-- **Trade mark.** Oneweek is a common word. Do not spend money defending it.
+- **Trade mark.** "Done in a Week" is a plain phrase. Do not spend money defending it.
 
 ## Yearly dates
 

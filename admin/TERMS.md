@@ -1,14 +1,14 @@
-# Oneweek terms
+# Done in a Week terms
 
 Plain-English terms for a build week. Send with the quote. Not legal advice. If a client wants a longer contract, they can send theirs and we read it.
 
-**Who:** Alex, trading as Oneweek, sole trader. "You" is the client named on the quote.
+**Who:** Alex, trading as Done in a Week, sole trader. "You" is the client named on the quote.
 
 ## The build week
 
 1. **What you get.** The thing described in the signed-off one-page spec, working and handed over by the Friday of the booked week. The spec is the whole scope. If it is not in the spec, it is not in the week.
 2. **Extras.** Anything that comes up during the week that is not in the spec gets written down. It goes in a second week, quoted separately, rather than slowing this one.
-3. **Price.** £2,000 fixed. £1,000 to book the week, £1,000 on handover. No VAT is charged (Oneweek is not VAT registered). Invoices are due within 7 days.
+3. **Price.** £2,000 fixed. £1,000 to book the week, £1,000 on handover. No VAT is charged (Done in a Week is not VAT registered). Invoices are due within 7 days.
 4. **Booking.** The week is held once the first £1,000 is paid. Until then it is open to anyone.
 5. **Moving the week.** You can move the week once with 7 days notice. Less than that, or a second move, and the deposit covers the lost week and a new deposit books a new one.
 6. **What you provide.** Before the Monday: logins for domain, hosting, app stores and any system we connect to; the content (text, logo, photos, the spreadsheet it replaces); and one named person who can answer quick questions the same day. If these arrive late, the week still ends on the Friday.
