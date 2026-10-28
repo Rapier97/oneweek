@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Client | <Company name, town, main contact> |
-| Developer | Alex (Oneweek) |
+| Developer | Alex (Done in a Week) |
 | Price | £2,000 fixed: see Price |
 | Build week | <Mon D Mon to Fri D Mon YYYY> |
 | Handover | <Fri D Mon YYYY> |

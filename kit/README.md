@@ -1,4 +1,4 @@
-# Oneweek kit
+# Done in a Week kit
 
 Used in this order: first call, then QUOTE, then SPEC, then build, then HANDOVER, then OUTREACH.
 

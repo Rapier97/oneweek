@@ -3,15 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Oneweek: apps, websites and AI, built in a week</title>
-<meta name="description" content="I build apps and tech for small businesses. £2,000 a week, or £50 an hour.">
-<meta property="og:title" content="Oneweek: apps, websites and AI, built in a week">
-<meta property="og:description" content="I build apps and tech for small businesses. £2,000 a week, or £50 an hour.">
+<title>Done in a Week: apps, websites and AI by Alex</title>
+<meta name="description" content="I build whatever your business needs. Apps, websites, AI tools, SEO, automation. One week, £2,000.">
+<meta property="og:title" content="Done in a Week: apps, websites and AI by Alex">
+<meta property="og:description" content="I build whatever your business needs. Apps, websites, AI tools, SEO, automation. One week, £2,000.">
 <meta property="og:url" content="https://rapier97.github.io/oneweek/">
 <meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='32' y='54' text-anchor='middle' font-family='Inter Tight,system-ui,sans-serif' font-weight='800' font-size='60' fill='%231f6f4a'%3E1%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;800&display=swap" rel="stylesheet">
+<script type="application/ld+json" id="ld">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Done in a Week",
+  "url": "https://rapier97.github.io/oneweek/",
+  "email": "hello@example.com",
+  "description": "I build whatever your business needs: apps, websites, AI tools, SEO, automation and internal systems. One week, £2,000.",
+  "areaServed": "United Kingdom",
+  "priceRange": "££"
+}
+</script>
 <style>
   :root {
     --bg: #f6f4ef;
@@ -53,7 +66,8 @@
   .lead { font-size: 21px; color: var(--muted); max-width: 34ch; margin: 24px 0 32px; }
   section { padding: 56px 0; border-top: 1px solid var(--line); }
   h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); font-weight: 600; margin-bottom: 24px; }
-  .price { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .intro { color: var(--muted); max-width: 60ch; margin: -12px 0 24px; }
+  .price, .fit { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 28px; }
   .big { font-size: 48px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
   .big small { font-size: 18px; font-weight: 400; color: var(--muted); letter-spacing: 0; }
@@ -63,36 +77,54 @@
   ol li::before { content: counter(s); font-weight: 800; color: var(--accent); font-size: 22px; }
   ol b { display: block; }
   ol span { color: var(--muted); }
-  .tags { display: flex; flex-wrap: wrap; gap: 10px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; }
   .tags li { list-style: none; border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; }
-  .tags { padding: 0; }
+  .fit h3 { font-size: 20px; letter-spacing: -0.015em; font-weight: 800; margin-bottom: 12px; }
+  .fit h3.no { color: var(--muted); }
+  .fit ul { list-style: none; padding: 0; display: grid; gap: 8px; color: var(--muted); }
+  .fit li::before { content: "+"; color: var(--accent); font-weight: 800; display: inline-block; width: 20px; }
+  .fit .no ~ ul li::before { content: "\2013"; color: var(--muted); }
+  .case + .case { margin-top: 16px; }
   .case h3 { font-size: 24px; letter-spacing: -0.02em; font-weight: 800; margin-bottom: 6px; }
   .case .client { color: var(--muted); margin-bottom: 20px; }
   .case dl { display: grid; grid-template-columns: 72px 1fr; gap: 10px 16px; }
   .case dt { font-weight: 600; color: var(--accent); }
   .case dd { color: var(--muted); }
+  .soon { display: none; }
   .faq { display: grid; gap: 24px; }
   .faq h3 { font-size: 20px; letter-spacing: -0.015em; font-weight: 600; margin-bottom: 6px; }
   .faq p { color: var(--muted); max-width: 60ch; }
+  .book p { color: var(--muted); max-width: 60ch; margin-bottom: 24px; }
+  .or { font-size: 16px; margin-top: 16px; }
   .cta { text-align: center; padding: 80px 0; }
   .cta h3 { font-size: clamp(30px, 5vw, 44px); letter-spacing: -0.03em; margin-bottom: 24px; }
   .free { color: var(--muted); font-size: 16px; margin-top: 20px; }
   .free::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); margin-right: 8px; vertical-align: middle; }
   .free b { color: var(--ink); }
   footer { color: var(--muted); font-size: 14px; padding: 24px 0 40px; }
-  @media (max-width: 600px) { .price { grid-template-columns: 1fr; } }
+  @media (max-width: 600px) { .price, .fit { grid-template-columns: 1fr; } }
+  @media print {
+    :root { --bg: #fff; --ink: #000; --muted: #444; --line: #bbb; --accent: #1f6f4a; --card: #fff; }
+    body { font-size: 12pt; }
+    .btn, .free, .cta { display: none; }
+    .hero { padding: 24px 0; }
+    section { padding: 20px 0; break-inside: avoid; }
+    .card { break-inside: avoid; }
+    .or { display: block; }
+    footer::after { content: " · " attr(data-url); }
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <div class="logo">One<span>week</span></div>
+    <div class="logo">Done in a <span>week</span></div>
     <a class="btn small contact" href="#">Get in touch</a>
   </header>
 
   <div class="hero">
-    <h1>Apps, websites and AI for small businesses. <em>Built in a week.</em></h1>
-    <p class="lead">Tell me what's slowing you down. A week later it's fixed.</p>
+    <h1>I build whatever your business needs. <em>In a week.</em></h1>
+    <p class="lead">Apps, websites, AI tools, SEO, automation. Rota on a spreadsheet, quotes typed by hand, bookings over WhatsApp, a website from 2015. Tell me the problem, I'll build the fix.</p>
     <a class="btn contact" href="#">Tell me what you need →</a>
     <p class="free">One client a week. Next free week: <b class="next-free"></b></p>
   </div>
@@ -122,17 +154,45 @@
 
   <section>
     <h2>What I build</h2>
+    <p class="intro">One developer, no handoffs. If it runs on a phone, a laptop or a server, I can build it.</p>
     <ul class="tags">
-      <li>iPhone &amp; Android apps</li>
-      <li>Websites</li>
-      <li>Booking systems</li>
-      <li>Staff rotas</li>
-      <li>Spreadsheet replacements</li>
+      <li>iPhone and Android apps</li>
+      <li>Websites that work on a phone</li>
+      <li>Online booking and payments</li>
+      <li>Staff rotas and time sheets</li>
+      <li>Quotes and invoices, done for you</li>
       <li>AI that answers your emails</li>
-      <li>AI that writes your quotes</li>
-      <li>Automations</li>
-      <li>Anything else, ask</li>
+      <li>AI that reads your paperwork</li>
+      <li>SEO, so people find you</li>
+      <li>Automation between the tools you already use</li>
+      <li>Internal tools and dashboards</li>
+      <li>Whole small-business systems</li>
+      <li>Replacing that spreadsheet</li>
     </ul>
+  </section>
+
+  <section>
+    <h2>How I work</h2>
+    <div class="fit">
+      <div class="card">
+        <h3>Good fit</h3>
+        <ul>
+          <li>One clear problem at a time, said in a sentence</li>
+          <li>You want it done fast and are happy with simple</li>
+          <li>You like direct: straight answers, no slides, no account manager</li>
+          <li>You can give me an hour on day 1 and an hour on Friday</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 class="no">Not a fit</h3>
+        <ul>
+          <li>Marketplace apps, the next Uber or Airbnb</li>
+          <li>Anything that needs months, or a committee</li>
+          <li>"I'm not sure what I want yet"</li>
+          <li>Long proposals before any work starts</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section>
@@ -147,6 +207,18 @@
         <dd>An iPhone and Android app where staff set availability, see the rota and log miles and expenses, and the owner builds the week in minutes.</dd>
         <dt>Time</dt>
         <dd>One week.</dd>
+      </dl>
+    </div>
+    <div class="card case soon">
+      <h3>&lt;Build name&gt;</h3>
+      <p class="client">&lt;Type of business and where&gt;</p>
+      <dl>
+        <dt>Before</dt>
+        <dd>&lt;What they were doing by hand&gt;</dd>
+        <dt>After</dt>
+        <dd>&lt;What I built and what it does for them&gt;</dd>
+        <dt>Time</dt>
+        <dd>&lt;One week&gt;</dd>
       </dl>
     </div>
   </section>
@@ -173,22 +245,36 @@
     </div>
   </section>
 
+  <section class="book" id="book">
+    <h2>Book a call</h2>
+    <p>Twenty minutes, free. You describe the problem, I tell you straight whether a week will fix it.</p>
+    <a class="btn book-link" href="#book" data-book-url="">Pick a time →</a>
+    <p class="or">or email <a class="contact email" href="#"></a></p>
+  </section>
+
   <div class="cta">
     <h3>What do you need built?</h3>
     <a class="btn contact" href="#">Get in touch →</a>
     <p class="free">Next free week: <b class="next-free"></b></p>
   </div>
 
-  <footer>© Oneweek</footer>
+  <footer data-url="rapier97.github.io/oneweek">© Done in a Week</footer>
 </div>
 <script>
-  // The only two lines you need to edit
+  // The only lines you need to edit
   const EMAIL = "hello@example.com"; // placeholder until the business address exists
   const NEXT_FREE = "Monday 9 November";
+  // Booking link: put the calendar page URL in data-book-url on the "Pick a time" button
   document.querySelectorAll(".next-free").forEach(b => b.textContent = NEXT_FREE);
   document.querySelectorAll(".contact").forEach(a => {
     a.href = "mailto:" + EMAIL + "?subject=I need something built";
   });
+  document.querySelectorAll(".email").forEach(a => a.textContent = EMAIL);
+  document.querySelectorAll(".book-link").forEach(a => {
+    if (a.dataset.bookUrl) a.href = a.dataset.bookUrl;
+  });
+  const ld = document.getElementById("ld");
+  ld.textContent = ld.textContent.replace("hello@example.com", EMAIL);
 </script>
 </body>
 </html>
